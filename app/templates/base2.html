@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="static/label.png">
+    
+    
+    {% if title %}
+    <title>{{title}} - #ELObjetivista</title>
+    {% else %}
+    <title>#ELObjetivista</title>
+    {% endif %}
+
+    <!-- Bootstrap core CSS -->
+    <link href="/static/css/bootstrap.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom styles for this template -->
+    <link href="/static/css/carousel.css" rel="stylesheet">
+    <script type="text/javascript">
+    jQuery(document).bind('keyup', function(e) {
+        if (e.which==39) {
+            jQuery('#myCarousel').carousel('next');
+        } else if (e.which==37) {
+            jQuery('#myCarousel').carousel('prev');
+        }
+    });
+    </script>
+    <style>
+    @media screen and (max-width: 568px) {
+            h1 {
+        font-size:60px;
+        }
+    }
+    /* http://support.addthis.com/customer/portal/questions/1136093-share-buttons-in-center-position */
+    div.addthis_toolbox {
+    width:400px;
+    margin: 0 auto;
+    }
+    .carousel-caption {
+      max-width: 550px;
+      padding: 0 20px;
+      margin:0 auto;
+      margin-top: 200px;
+      text-align:center;
+    }
+    .glyphicon glyphicon-chevron-left{
+    color:balck;
+    }
+    
+    h1{
+    color:black;
+    text-shadow: none;
+    }
+    p{
+    text-shadow: none;
+    }
+
+    </style>
+    </style>
+  </head>
+<!-- NAVBAR
+================================================== -->
+  <body>
+     
+    <div class="navbar">
+      <div class="container">          
+               <br>
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/"><img src="static/title.png" alt="10" width="200"></a>
+                    
+      </div>
+    </div>
+    
+    <!-- Carousel
+    ================================================== -->
+    <br><br>
+    
+	<!-- starts carousel -->
+	<div class="container">
+        <div class="content">
+		<div class="row animated fadeInDown">
+			<div class="span12">
+				<div id="myCarousel" class="carousel slide">    
+              <!-- Indicators -->
+              <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" ></li>
+                <li data-target="#myCarousel" data-slide-to="1"class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+              </ol>
+              <br>
+              <div class="carousel-inner">
+              <div class="item active" id="home-carousel-inner">
+                 <img src="static/background.png" alt="elObjetivista" width="500" height="99" />
+                  <div class="container">
+                    <div class="carousel-caption">
+                       <div class="alert alert-edu home-section" id="home-welcome">
+                            <div class="row-fluid">
+                                <div class="span6">
+                                    <h1 id="welcome">
+                                        Bienvenido!
+                                    </h1>
+                                </div>
+                                <div class="span6">
+                                    <div class="welcome-blurb">
+                                        <p>                                            
+                                            EL objetivista tu portal de titulares aleatorios de ultima hora de medios de noticias online.
+                                        </p>                                
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              {% block content %}{% endblock %}                           
+              <a class="carousel-control left" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+              <a class="carousel-control right" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>            
+            </div>
+		</div>
+        </div>
+	</div>
+    <!-- /.carousel -->
+    <div class="container marketing">
+    <!-- AddThis Button BEGIN -->  
+    <div class="addthis_toolbox addthis_default_style ">
+        <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+        <a class="addthis_button_tweet"></a>
+        <a class="addthis_button_pinterest_pinit" pi:pinit:layout="horizontal"></a>
+        <a class="addthis_counter addthis_pill_style"></a>
+    </div>
+    <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5268d2a97e02b5bb"></script>
+    <!-- AddThis Button END -->
+      <!-- FOOTER -->
+      <hr>
+      <br>
+      <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2013 El Objetivista.</p>
+      </footer>
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/static/js/jquery.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/holder.js"></script>
+  </body>
+</html>
