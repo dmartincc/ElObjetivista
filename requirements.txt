@@ -1,12 +1,6 @@
 Flask==0.10.1
 Jinja2==2.7.1
-gunicorn==0.17.2
 MarkupSafe==0.18
-Pattern==2.6
-PyYAML==3.10
 Werkzeug==0.9.4
-httplib2==0.8
+gunicorn==18.0
 itsdangerous==0.23
-multiprocessing==2.6.2.1
-virtualenv==1.10.1
-

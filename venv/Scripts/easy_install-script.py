@@ -1,4 +1,4 @@
-#!C:\Users\IBM_ADMIN\Desktop\Learning\WebDevelopment\TestProjectFlask\venv\Scripts\python.exe
+#!C:\Users\IBM_ADMIN\Documents\GitHub\ElObjetivista\venv\Scripts\python.exe
 # EASY-INSTALL-ENTRY-SCRIPT: 'setuptools==0.9.8','console_scripts','easy_install'
 __requires__ = 'setuptools==0.9.8'
 import sys

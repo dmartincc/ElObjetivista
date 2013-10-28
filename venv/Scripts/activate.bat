@@ -1,5 +1,5 @@
 @echo off
-set "VIRTUAL_ENV=C:\Users\IBM_ADMIN\Desktop\Learning\WebDevelopment\TestProjectFlask\venv"
+set "VIRTUAL_ENV=C:\Users\IBM_ADMIN\Documents\GitHub\ElObjetivista\venv"
 
 if defined _OLD_VIRTUAL_PROMPT (
     set "PROMPT=%_OLD_VIRTUAL_PROMPT%"
