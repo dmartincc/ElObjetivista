@@ -2,7 +2,11 @@
 {% block content %}
 {% for item in news %}
 <div class="item">
-   <img src="static/background.png" alt="titulares" width="500" height="99" />
+   {% if item.image %}
+    <img src={{item.image}} alt="titulares" width="500" height="99" />
+    {% else %}
+    <img src="static/background.png" alt="titulares" width="500" height="99" />
+    {% endif %}
     <div class="carousel-caption">
         <div class="span2">
             <h1>{{item.title}}</h1>
