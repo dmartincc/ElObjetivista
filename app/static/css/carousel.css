@@ -126,18 +126,3 @@ body {
     margin-top: 120px;
   }
 }
-
-@media (max-width: 979px) {
-    #myCarousel.carousel img {
-    width: 100%;
-    }
-}
-
-
-@media (max-width: 470px) {
-    #myCarousel.carousel img {
-    max-width:300%;
-    width:100%;
-    min-height: 100px;
-    }
-}
