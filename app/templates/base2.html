@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset="utf-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Noticias aleatorias de medios online">
     <meta name="author" content="El Objetivista">
@@ -103,8 +104,8 @@
 	<div class="container">
         <div class="content">
 		<div class="row animated fadeInDown">
-			<div class="span12">
-				<div id="myCarousel" class="carousel slide">    
+
+			<div id="myCarousel" class="carousel slide">    
               <!-- Indicators -->
               <ol class="carousel-indicators">
                 <li data-target="#myCarousel" data-slide-to="0" ></li>
@@ -113,9 +114,9 @@
               </ol>
               <br>
               <div class="carousel-inner">
-              <div class="item active" id="home-carousel-inner">
+                <div class="item active" id="home-carousel-inner">
                  <img src="static/background.png" alt="elObjetivista" width="500" height="99" />
-                  <div class="container">
+
                     <div class="carousel-caption">
                        <div class="alert alert-edu home-section" id="home-welcome">
                             <div class="row-fluid">
@@ -134,16 +135,18 @@
                             </div>
                         </div>
                     </div>
-                  </div>
+                  
                 </div>
-              {% block content %}{% endblock %}                           
-            </div>
-            <a class="carousel-control left" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-            <a class="carousel-control right" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
-            </div>
-	</div>
+                {% block content %}{% endblock %}                
+              </div>
+              <a class="carousel-control left" href="#myCarousel" data-slide="prev" ><span class="glyphicon glyphicon-chevron-left"></span></a>
+              <a class="carousel-control right" href="#myCarousel" data-slide="next" ><span class="glyphicon glyphicon-chevron-right"></span></a>
+                            
+              </div>           
+             
         </div>
-	</div>
+      </div>
+    </div>
     <!-- /.carousel -->
     <div class="container marketing">
     <!-- AddThis Smart Layers BEGIN -->
