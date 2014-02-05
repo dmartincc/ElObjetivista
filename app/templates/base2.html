@@ -2,73 +2,15 @@
 <html lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset="utf-8">
-    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="El Objetivista - Noticias aleatorias de medios online">
-
     <meta name="author" content="El Objetivista">
     <meta name="p:domain_verify" content="f70ec1cd005b96ad13011e28e712b83c"/>
-    <link rel="shortcut icon" href="static/label.png">
-    
-    
-    
-
-    <title>EL OBJETIVISTA - Noticias Aleatorias</title>
-
-    
-
-    <!-- Bootstrap core CSS -->
-    <link href="/static/css/bootstrap.css" rel="stylesheet">
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="../../assets/js/html5shiv.js"></script>
-      <script src="../../assets/js/respond.min.js"></script>
-    <![endif]-->
-
-    <!-- Custom styles for this template -->
-    <link href="/static/css/carousel.css" rel="stylesheet">
-    <script type="text/javascript">
-    jQuery(document).bind('keyup', function(e) {
-        if (e.which==39) {
-            jQuery('#myCarousel').carousel('next');
-        } else if (e.which==37) {
-            jQuery('#myCarousel').carousel('prev');
-        }
-    });
-    </script>
-    <style>
-    @media screen and (max-width: 568px) {
-            h1 {
-        font-size:60px;
-        }
-    }
-    /* http://support.addthis.com/customer/portal/questions/1136093-share-buttons-in-center-position */
-    div.addthis_toolbox {
-    width:400px;
-    margin: 0 auto;
-    }
-    .carousel-caption {
-      max-width: 550px;
-      padding: 0 20px;
-      margin:0 auto;
-      margin-top: 200px;
-      text-align:center;
-    }
-    .glyphicon glyphicon-chevron-left{
-    color:balck;
-    }
-    
-    h1, h2, h3, h4, h5, h6{
-    text-shadow: none;
-    font-weight: 800;
-    line-height: 1.1;
-    }
-    p{
-    text-shadow: none;
-    }
-
-    </style>
+    <link rel="shortcut icon" href="static/label.png">    
+    <title>El Objetivista - Noticias aleatorias</title>
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="static/css/foundation.css" />
+    <script src="static/js/vendor/modernizr.js"></script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -79,114 +21,97 @@
       ga('send', 'pageview');
 
     </script>
-  </head>
+    <style>    
+        h2{color: white;}
+        h3{color: white;}       
+    </style>
+   
+</head>
 <!-- NAVBAR
 ================================================== -->
   <body>
-     
-    <div class="navbar">
-      <div class="container">          
-               <br>
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand" href="/"><img src="static/title.png" alt="10" width="200"></a>
-                    
-      </div>
-    </div>
+      <div class="fixed">
+        <nav class="top-bar">
+          <ul class="title-area">
+            <li class="name">
+              <h1><a href="#"> <span>#ElObjetivista<span/></a></h1>
+            </li>
+           </ul>     
+        </nav>    
+      </div>   
     
     <!-- Carousel
     ================================================== -->
-    <br><br>
-    
+    <div class="container">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 	<!-- starts carousel -->
-	<div class="container">
-        <div class="content">
-		<div class="row animated fadeInDown">
-
-			<div id="myCarousel" class="carousel slide">    
-              <!-- Indicators -->
-              <ol class="carousel-indicators">
-                <li data-target="#myCarousel" data-slide-to="0" ></li>
-                <li data-target="#myCarousel" data-slide-to="1"class="active"></li>
-                <li data-target="#myCarousel" data-slide-to="2"></li>
-              </ol>
-              <br>
-              <div class="carousel-inner">
-                <div class="item active" id="home-carousel-inner">
-                 <img src="static/background.png" alt="elObjetivista" width="500" height="99" />
-
-                    <div class="carousel-caption">
-                       <div class="alert alert-edu home-section" id="home-welcome">
-                            <div class="row-fluid">
-                                <div class="span6">
-                                    <h1 id="welcome">
-                                        Bienvenido!
-                                    </h1>
-                                </div>
-                                <div class="span6">
-                                    <div class="welcome-blurb">
-                                        <p>                                            
-                                            El objetivista tu portal de titulares aleatorios de ultima hora de medios de noticias online.
-                                        </p>                                
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                  
-                </div>
-                {% block content %}{% endblock %}                
-              </div>
-              <a class="carousel-control left" href="#myCarousel" data-slide="prev" ><span class="glyphicon glyphicon-chevron-left"></span></a>
-              <a class="carousel-control right" href="#myCarousel" data-slide="next" ><span class="glyphicon glyphicon-chevron-right"></span></a>
-                            
-              </div>           
+    <div class="row">        
+          <ul class="orbit" data-orbit data-options="bullets:false;" style="height:auto;">              
+              {% block content %}{% endblock %}           
+          </ul>
              
-        </div>
-      </div>
+          <!-- Timer and Play/Pause Button -->
+          <div class="orbit-timer">
+            <span></span>
+            <div class="orbit-progress"></div>
+          </div>       
     </div>
-    <!-- /.carousel -->
-    <div class="container marketing">
+    <br>
+    <div class="row">
+        <div class="small-5 large-centered columns" style="text-align: center">
+            <!-- AddThis Button BEGIN -->
+            <div class="addthis_toolbox addthis_default_style">
+            <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+            <a class="addthis_button_tweet"></a>
+            <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+            <a class="addthis_counter addthis_pill_style"></a>
+            </div>
+            <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+            <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5268d2a97e02b5bb"></script>
+        </div>
+    </div>
+    <!-- AddThis Button END -->
+    <!-- FOOTER -->      
+    <div class="row">
+        <hr>
+        <p>&copy; 2014 El Objetivista.</p>       
+    </div>    
+  
+   
     <!-- AddThis Smart Layers BEGIN -->
-	<!-- Go to http://www.addthis.com/get/smart-layers to customize -->
-	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5268d2a97e02b5bb"></script>
-	<script type="text/javascript">
-	  addthis.layers({
-	    'theme' : 'transparent',
-	    'share' : {
-	      'position' : 'left',
-	      'numPreferredServices' : 5
-	    }, 
-	    'follow' : {
-	      'services' : [
-	        {'service': 'facebook', 'id': 'pages/El-Objetivista/568224576584522'},
-	        {'service': 'twitter', 'id': 'ElObjetivista'},
-	        {'service': 'google_follow', 'id': 'u/0/b/103518538726540749073/103518538726540749073/posts'},
-	        {'service': 'pinterest', 'id': 'ElObjetivista'}
-	      ]
-	    },   
-	    'recommended' : {} 
-	  });
-	</script>
-	<!-- AddThis Smart Layers END -->
-      <!-- FOOTER -->
-      <hr>
-      <br>
-      <footer>
-        <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>&copy; 2014 El Objetivista.</p>
-      </footer>
+    <!-- Go to http://www.addthis.com/get/smart-layers to customize -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5268d2a97e02b5bb"></script>
+    <script type="text/javascript">
+      addthis.layers({
+        'theme' : 'transparent',
+        'follow' : {
+          'services' : [            
+            {'service': 'twitter', 'id': 'ElObjetivista'},
+            {'service': 'facebook', 'id': 'pages/El-Objetivista/568224576584522'},
+            {'service': 'google_follow', 'id': 'u/0/b/103518538726540749073/103518538726540749073/posts'}          
+          ]
+        },  
+        'whatsnext' : {},  
+        'recommended' : {} 
+      });
+    </script>
+    <!-- AddThis Smart Layers END -->        
+      
     </div><!-- /.container -->
 
-
-    <!-- Bootstrap core JavaScript
+    <!-- Foundation core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="/static/js/jquery.js"></script>
-    <script src="/static/js/bootstrap.min.js"></script>
-    <script src="/static/js/holder.js"></script>
+    <script src="static/js/vendor/jquery.js"></script>
+    <script src="static/js/foundation.min.js"></script>
+    <script src="static/js/foundation/foundation.orbit.js"></script>
+    <script>
+      $(document).foundation();     
+    </script>
   </body>
 </html>

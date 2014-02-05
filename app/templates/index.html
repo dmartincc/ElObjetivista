@@ -1,26 +1,21 @@
 {% extends "base2.html" %}
 {% block content %}
 {% for item in news %}
-<div class="item">
-   {% if item.image %}
-    <img src={{item.image}} alt="titulares" width="500" height="99" />
+ <li id="slide">
+    {% if item.image %} 
+    <div style="height:500px; overflow:hidden"> 
+        <img class="back" src={{item.image}} style="width:100%" />  
+    </div>    
     {% else %}
-    <img src="static/background.png" alt="titulares" width="500" height="99" />
+    <img class="back" src="static/background.png" height="500" style="width:100%" />
     {% endif %}
-    <div class="carousel-caption">
-        <div class="span2">
-            <h1>{{item.title}}</h1>
-        </div>
-        <br><br><br>
-        <div class="span6">
-            <div class="welcome-blurb">
-                <p>{{item.author}}</p>  
-                <p><a class="btn btn-primary btn-lg" href={{item.link}} target="_blank">Leer</a></p>
-            </div>
-            <br>
-        </div>
-    </div>
- </div>  
-    
+    <div class="orbit-caption" style="background-color : transparent;">                                                        
+        <div class="small-10 large-centered columns" style="text-align: center">
+            <h2>{{item.title}}</h2>
+            <p style="color:white;">{{item.author}}</p>
+            <a href={{item.link}} class="button" target="_blank">Leer</a>
+        </div>                         
+   </div>                
+</li>   
 {% endfor %}
 {% endblock %}
