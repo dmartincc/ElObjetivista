@@ -12,15 +12,15 @@ import time, random
 def index(): 
     input = getNews.getData()
     jsonData = json.loads(input) 
-    rawNews  = jsonData['value']['items'] 
+    news  = jsonData['value']['items'] 
     now = time.strftime("%c")
-    range=len(rawNews)-30
+    range=len(news)-30
     data=random.sample(news, 100)
     print data
     return render_template("index.html",
                             #title = 'Home',
                             news = data[-10:],
-                            entities = rawNews,
+                            entities = news,
                             now= now)
 
 @app.route('/analytics')
