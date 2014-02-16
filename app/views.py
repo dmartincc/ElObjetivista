@@ -23,7 +23,7 @@ def index():
                             entities = data,
                             now= now)
 
-@app.route('/analytics')
+@app.route('/analytics/')
 def analytics(): 
     now = time.strftime("%c")
     words=[]
@@ -52,9 +52,3 @@ def analytics():
     return render_template("analytics.html",                            
                             entities = output2,
                             now= now)
-
-       
-
-   
-    
-
