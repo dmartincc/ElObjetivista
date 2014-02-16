@@ -24,7 +24,7 @@
           font-size: 1em;
        }
        p {
-          font-size: 1em;
+          font-size: 0.6em;
        }
       img{
             height: 250px;  
@@ -47,16 +47,6 @@
     }
         
     </style>
-    <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-45164598-1', 'elobjetivista.com');
-  ga('send', 'pageview');
-
-</script>
    
 </head>
 <!-- NAVBAR
@@ -73,16 +63,48 @@
                 <li class="toggle-topbar menu-icon">
                   <a href="#"><span>menu</span></a>
                 </li>
-              </ul>               
+              </ul>              
+            <section class="top-bar-section">
+                <!-- Right Nav Section -->
+                <ul class="right">
+                  <li class="divider"></li>
+                  <li class="has-dropdown not-click">
+                    <a href="#">Secciones</a>
+                    <ul class="dropdown"><li class="title back js-generated">
+                      <li><label>Secciones</label></li>                  
+                      <li>
+                        <a href="#">Portada</a>
+                      </li>
+                      <li>
+                        <a href="#">Politica</a>
+                      </li> 
+                       <li>
+                        <a href="#">Internacional</a>
+                      </li>
+                        <li>
+                        <a href="#">Economia</a>
+                      </li>
+                      <li>
+                        <a href="#">Tecnologia</a>
+                      </li>
+                      <li>
+                        <a href="#">Deportes</a>
+                      </li>
+                      <li>
+                        <a href="#">Sociedad</a>
+                      </li>
+                      <li>
+                        <a href="#">Cultura</a>
+                      </li>                  
+                  </li>
+                </ul>
+              </section></nav><!-- End Top Bar -->
           </div>
         </div>
         
         <div class="row">  
-             <div class="large-12 columns">
-                <ul class="slider" data-orbit style="height:300px;" data-options="bullets:false;" >
-                 {% block content %}{% endblock %}
-                </li>
-              </ul>           
+             <div class="large-12 columns">               
+                 {% block content %}{% endblock %}                        
            </div>
        </div>
        <div class="row">        
@@ -102,13 +124,13 @@
                     <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
                     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5268d2a97e02b5bb"></script>
                 </div>
-                </div> 
-                   
+                </div>                   
             </div>
        </div> 
        <div class="row">        
              <div class="large-12 columns">
-            {% block entities %}{% endblock %}  
+            {% block entities %}{% endblock %} 
+            {% block analytics %}{% endblock %} 
             </div>
        </div>         
     <!-- FOOTER -->      
@@ -132,7 +154,7 @@
             {'service': 'google_follow', 'id': 'u/0/b/103518538726540749073/103518538726540749073/posts'}          
           ]
         },  
-        'whatsnext' : {}
+        'whatsnext' : {}        
       });
     </script>
     <!-- AddThis Smart Layers END -->        
