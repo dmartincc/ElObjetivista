@@ -7,13 +7,11 @@ import time, random
 import re
 from nltk.corpus import stopwords
 
-input = getNews.getData()
-jsonData = json.loads(input) 
-news  = jsonData['value']['items'] 
- 
-
 @app.route('/')
-def index():     
+def index(): 
+    input = getNews.getData()
+    jsonData = json.loads(input) 
+    news  = jsonData['value']['items'] 
     now = time.strftime("%c")
     range=len(news)-30
     data=random.sample(news, 100)
@@ -25,6 +23,9 @@ def index():
 
 @app.route('/analytics/')
 def analytics(): 
+    input = getNews.getData()
+    jsonData = json.loads(input) 
+    news  = jsonData['value']['items'] 
     now = time.strftime("%c")
     words=[]
     for art in news:
