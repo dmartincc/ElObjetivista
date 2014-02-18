@@ -49,7 +49,7 @@ def analytics():
         wordFreqD[important_words[i]] = wordFreqD.get(important_words[i], 0)+1
 
     output = [{"children":{"packageName":"entities","className":k,"value":v}} for v,k in sorted([(v,k) for k,v in wordFreqD.items()],reverse=True)]
-    output2=output[:20]
+    output2=output[:30]
     return render_template("analytics.html",                            
-                            entities = output2,
+                            entities = json.dumps(output2),
                             now= now)
