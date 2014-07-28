@@ -1,4 +1,4 @@
-{% extends "base2.html" %}
+{% extends "base.html" %}
 {% block content %}
  <ul class="slider" data-orbit style="height:300px;" data-options="bullets:false;" >
 {% for item in news %}
@@ -31,11 +31,12 @@
 
 {% block entities %}
 {% for item in entities %}
- <div class="row"> 
-                 {% if item.author %}
+ <div class="row">
+    
+                {% if item.author %}
                 {% if item.image %}               
                 <hr>
-                  <div class="small-4 columns">
+                  <div class="small-4 columns item">
                            <img class="pic" src={{item.image}}>
                   </div>
                   <div class="small-8 columns">
@@ -76,6 +77,7 @@
                   
                  {% endif %}
                  {% endif %}
+                    
 </div>
   
 

@@ -9,17 +9,40 @@ from nltk.corpus import stopwords
 
 @app.route('/')
 def index(): 
-    input = getNews.getData()
+    input = getNews.fetchNews()
+    jsonData = json.loads(input) 
+    news  = jsonData['value']['items'] 
+    now = time.strftime("%c")
+    range=len(news)-30
+    data=random.sample(news, range)
+    return render_template("index.html",
+                            #title = 'Home',
+                            news = data,
+                            entities = data,
+                            now= now)
+
+@app.route('/test')
+def index2(): 
+    input = getNews.fetchNews()  
     jsonData = json.loads(input) 
     news  = jsonData['value']['items'] 
     now = time.strftime("%c")
     range=len(news)-30
     data=random.sample(news, 100)
-    return render_template("index.html",
+    a = ['a','b','c','d']
+    for item in data:
+        item["div"]=a[random.randint(0,3)]
+    return render_template("index2.html",
                             #title = 'Home',
-                            news = data[-10:],
-                            entities = data,
-                            now= now)
+                            news = data[0:19],
+                            news2 = data[20:39])
+
+@app.route('/noticias')
+def news(): 
+    
+    return render_template("noticias.html",
+                            title="noticias")
+
 
 @app.route('/analytics/')
 def analytics(): 

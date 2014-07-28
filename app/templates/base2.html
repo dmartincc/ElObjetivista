@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Strict//EN">
 <html lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html"; charset="utf-8">
@@ -7,25 +7,89 @@
     <meta name="author" content="El Objetivista">
     <meta name="keywords" content="el objetivista, noticias, noticias aleatorias, titulares, titulares aleatorios, noticias ultima hora, titulares ultima hora">
     <meta name="p:domain_verify" content="f70ec1cd005b96ad13011e28e712b83c"/>
+    <meta property="twitter:account_id" content="4503599627756671" />
     <link rel="shortcut icon" href="static/label.png">    
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,400' rel='stylesheet' type='text/css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <title>El Objetivista - Noticias aleatorias</title>
     <!-- Custom styles -->
-    <link rel="stylesheet" href="static/css/foundation.css" />
-    <script src="static/js/vendor/modernizr.js"></script>
+    <link rel="stylesheet" href="/static/css/foundation.css" />
+    <script src="/static/js/vendor/modernizr.js"></script>
+    <script src="http://packery.metafizzy.co/packery.pkgd.min.js"></script>
     <style>
+
+    body {
+            padding: 0;
+            margin: 0;
+            font-family: 'Open Sans Condensed', sans-serif;
+            background-color:transparent;
+            width:100%;
+        }
      .top-bar{
-     color:white;
-     }
-     
-    @media only screen and (max-width: 767px) {
-        h4 {
-          font-size: 0.8em;
+     background-color:#585858;
+     }   
+   
+    
+
+    .container {
+        
+        position:relative;
+    }  
+
+
+    .image.a {    
+        position: absolute;
+        float: left;
+        width:100%;
+        bottom:0;
+        background-color:  #00ABB2;
+        opacity: 0.98;
+    }
+
+      
+    
+    .image.b{
+       position: absolute;
+        float: left;
+        width:100%;
+        bottom:0;
+        
+        opacity: 0.98;
+       
+       background-color: #B2127B;
+       
+    }
+    .image.c{
+       position: absolute;
+        float: left;
+        width:100%;
+        bottom:0;
+        
+        opacity: 0.98;
+       background-color: #FFDA00;
+       
+    }
+
+    .image.d{
+           position: absolute;
+        float: left;
+        width:100%;
+        bottom:0;
+        
+        opacity: 0.98;
+           background-color: #FF0054;
+           
+        }
+
+        @media only screen and (max-width: 767px) {
+        h6, h5, h4 {
+          font-size: 0.75em;
        }       
        h3 {
           font-size: 1em;
        }
        p {
-          font-size: 0.6em;
+          font-size: 0.9em;
        }
       img{
             height: 250px;  
@@ -46,91 +110,117 @@
             width: 100%;    
        }
     }
+
+    .bar {
+      fill: #A8ABBF;
+    }
+    #header {
+      background-color: black;
+    }
+
+    #ban {
+      background-color: #E8E8E8 ;
+    }
+
+    #ban2 {
+      background-color: #C8C8C8 ;
+    }
+
+  
         
     </style>
     <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-45164598-1', 'elobjetivista.com');
-  ga('send', 'pageview');
+      ga('create', 'UA-45164598-1', 'elobjetivista.com');
+      ga('send', 'pageview');
 
-</script>
-   
+    </script>       
 </head>
-<!-- NAVBAR
-================================================== -->
-  <body>
-       <div class="row">
-          <div class="large-12 columns">
-            <nav class="top-bar" data-topbar="">
-              <ul class="title-area">
-                <!-- Title Area -->
-                <li class="name">
-                  <h1 class="lead"><a href="#">ElObjetivista</a></h1>
-                </li>
-                <li class="toggle-topbar menu-icon">
-                  <a href="#"><span>menu</span></a>
-                </li>
-              </ul>              
-            <section class="top-bar-section">
-                <!-- Right Nav Section -->
-                <ul class="right">
-                  <li class="divider"></li>
-                  <li class="has-dropdown not-click">
-                    <a href="#">Secciones</a>
-                    <ul class="dropdown"><li class="title back js-generated">
-                      <li><label>Secciones</label></li>                  
-                      <li>
-                        <a href="#">Portada</a>
-                      </li>
-                      <li>
-                        <a href="http://www.elobjetivista.com/analytics">Analytics</a>
-                      </li>                       
-                </ul>
-              </section></nav><!-- End Top Bar -->
-          </div>
-        </div>
-        
-        <div class="row">  
-             <div class="large-12 columns">               
-                 {% block content %}{% endblock %}                        
-           </div>
-       </div>
-       <div class="row">        
-             <div class="large-12 columns">                
-               <div class="magellan-container" data-magellan-expedition="fixed" data-options="throttle_delay:0;" style="">
-                   <div class="small-6  columns">
-                    <p>{{now}}</p>
-                    </div>
-                  <div class="small-6  columns">
-                    <!-- AddThis Button BEGIN -->
-                    <div class="addthis_toolbox addthis_default_style">
-                    <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
-                    <a class="addthis_button_tweet"></a>
-                    <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
-                    <a class="addthis_counter addthis_pill_style"></a>
-                    </div>
-                    <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
-                    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5268d2a97e02b5bb"></script>
-                </div>
-                </div>                   
-            </div>
-       </div> 
-       <div class="row">        
-             <div class="large-12 columns">
-            {% block entities %}{% endblock %} 
-            {% block analytics %}{% endblock %} 
-            </div>
-       </div>         
-    <!-- FOOTER -->      
+<body>
+    <nav class="top-bar" data-topbar>
+      <ul class="title-area">
+        <li class="name">
+          <h1><a href="#">El Objetivista</a></h1>
+        </li>
+         <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+      </ul>
+
+      <section class="top-bar-section">
+        <!-- Right Nav Section -->
+        <ul class="right">
+          
+        </ul>       
+      </section>
+    </nav>
+  <div id="ban2">
+    <br>
     <div class="row">
-       <div class="large-12 columns"> 
-       <hr>       
-        <p>&copy; 2014 El Objetivista</p>       
-    </div>    
+        
+          <div class="small-2 large-2 columns"> 
+            <h6 style="color:white"><strong>Política</strong></h6>
+          </div>
+          <div class="small-2 large-2 columns"> 
+            <h6 style="color:white"><strong>Deportes</strong></h6>
+          </div>
+          <div class="small-2 large-2 columns"> 
+            <h6 style="color:white"><strong>Economía</strong></h6>
+          </div> 
+          <div class="small-2 large-2 columns"> 
+            <h6 style="color:white"><strong>Sociedad</strong></h6>
+          </div>
+          <div class="small-2 large-2 columns"> 
+            <h6 style="color:white"><strong>General</strong></h6>
+          </div>
+          <div class="small-2 large-2 columns"> 
+            
+          </div>         
+             
+    </div>
+    <br>
+  </div>
+  <div id="ban">
+    <div class="row text-center">
+        <br>
+         <div class="small-2 large-2 columns"> 
+          <a id="yo-button"></a>  
+          <br>
+           </div> 
+           <div class="small-8 large-8 columns"> 
+          <div class="addthis_toolbox addthis_default_style">                    
+          <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+          <a class="addthis_button_tweet"></a>
+          <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+          <a class="addthis_counter addthis_pill_style"></a>
+          </div>
+          </div>
+          <br>
+          
+          <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+          <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5268d2a97e02b5bb"></script>   
+        <p>     
+    </div>
+  </div>
+  <br>
+
+       
+    <div class="large-12 columns">             
+         {% block content %}{% endblock %}            
+    </div>
+               
+    <!-- FOOTER -->      
+   
+    <div class="large-12 columns" id="ban">
+    <br> 
+      <div class="row">
+      <p>&copy; 2014 El Objetivista</p>  
+      </div>     
+    </div>
+     
   
    
     <!-- AddThis Smart Layers BEGIN -->
@@ -149,7 +239,17 @@
         'whatsnext' : {}        
       });
     </script>
-    <!-- AddThis Smart Layers END -->        
+    <!-- AddThis Smart Layers END --> 
+    <script type="text/javascript">
+      var _yoData = {
+        "username": "ELOBJETIVISTA",
+        "trigger": "hay noticias importantes"
+      };
+      var s = document.createElement("script");
+      s.type = "text/javascript";
+      s.src = "//yoapp.s3.amazonaws.com/js/yo-button.js";
+      (document.head || document.getElementsByTagName("head")[0]).appendChild(s);
+    </script>       
       
     </div><!-- /.container -->
 
@@ -161,6 +261,12 @@
     <script src="static/js/foundation/foundation.orbit.js"></script>
     <script>
       $(document).foundation();   
+      var $container = $('#container').packery({
+  itemSelector: '.item',
+  columnWidth: $container.find('.grid-sizer')[0]
+});
+      // init
+      
       
     </script>
   </body>
