@@ -14,121 +14,12 @@
     <title>El Objetivista - Noticias aleatorias</title>
     <!-- Custom styles -->
     <link rel="stylesheet" href="/static/css/foundation.css" />
+    <link href="/static/css/flat-ui.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css" />
     <script src="/static/js/vendor/modernizr.js"></script>
     <script src="http://packery.metafizzy.co/packery.pkgd.min.js"></script>
-    <style>
-
-    body {
-            padding: 0;
-            margin: 0;
-            font-family: 'Open Sans Condensed', sans-serif;
-            background-color:transparent;
-            width:100%;
-        }
-     .top-bar{
-     background-color:#585858;
-     }   
-   
+     
     
-
-    .container {
-        
-        position:relative;
-    }  
-
-
-    .image.a {    
-        position: absolute;
-        float: left;
-        width:100%;
-        bottom:0;
-        background-color:  #00ABB2;
-        opacity: 0.98;
-    }
-
-      
-    
-    .image.b{
-       position: absolute;
-        float: left;
-        width:100%;
-        bottom:0;
-        
-        opacity: 0.98;
-       
-       background-color: #B2127B;
-       
-    }
-    .image.c{
-       position: absolute;
-        float: left;
-        width:100%;
-        bottom:0;
-        
-        opacity: 0.98;
-       background-color: #FFDA00;
-       
-    }
-
-    .image.d{
-           position: absolute;
-        float: left;
-        width:100%;
-        bottom:0;
-        
-        opacity: 0.98;
-           background-color: #FF0054;
-           
-        }
-
-        @media only screen and (max-width: 767px) {
-        h6, h5, h4 {
-          font-size: 0.75em;
-       }       
-       h3 {
-          font-size: 1em;
-       }
-       p {
-          font-size: 0.9em;
-       }
-      img{
-            height: 250px;  
-                        
-       }
-        .pic{
-            height: 100px;
-            width: 100px;    
-       }
-    }
-    @media only screen and (min-width: 768px) {
-       img{
-            height: 350px;  
-                        
-       }
-        .pic{
-            height:200px;
-            width: 100%;    
-       }
-    }
-
-    .bar {
-      fill: #A8ABBF;
-    }
-    #header {
-      background-color: black;
-    }
-
-    #ban {
-      background-color: #E8E8E8 ;
-    }
-
-    #ban2 {
-      background-color: #C8C8C8 ;
-    }
-
-  
-        
-    </style>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -142,9 +33,10 @@
 </head>
 <body>
     <nav class="top-bar" data-topbar>
+      <div class="container" style="height: 54px;">
       <ul class="title-area">
-        <li class="name">
-          <h1><a href="#">El Objetivista</a></h1>
+        <li class=" brand name">
+          <h1><a href="#" style="margin-left:1px;"><strong style="font-size:30px;">#elobjetivista</strong> <span style="font-size:20px;line-height:0px;color:#E8E8E8;">BETA</span></a> </h1>
         </li>
          <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
         <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
@@ -156,70 +48,52 @@
           
         </ul>       
       </section>
-    </nav>
-  <div id="ban2">
-    <br>
-    <div class="row">
-        
-          <div class="small-2 large-2 columns"> 
-            <h6 style="color:white"><strong>Política</strong></h6>
-          </div>
-          <div class="small-2 large-2 columns"> 
-            <h6 style="color:white"><strong>Deportes</strong></h6>
-          </div>
-          <div class="small-2 large-2 columns"> 
-            <h6 style="color:white"><strong>Economía</strong></h6>
-          </div> 
-          <div class="small-2 large-2 columns"> 
-            <h6 style="color:white"><strong>Sociedad</strong></h6>
-          </div>
-          <div class="small-2 large-2 columns"> 
-            <h6 style="color:white"><strong>General</strong></h6>
-          </div>
-          <div class="small-2 large-2 columns"> 
-            
-          </div>         
-             
     </div>
-    <br>
+    </nav>
+  
   </div>
   <div id="ban">
     <div class="row text-center">
-        <br>
-         <div class="small-2 large-2 columns"> 
+          <div class="small-2 large-2 columns"> 
           <a id="yo-button"></a>  
-          <br>
-           </div> 
+          </div> 
            <div class="small-8 large-8 columns"> 
-          <div class="addthis_toolbox addthis_default_style">                    
-          <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
-          <a class="addthis_button_tweet"></a>
-          <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
-          <a class="addthis_counter addthis_pill_style"></a>
-          </div>
-          </div>
-          <br>
+              <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://elobjetivista.com" data-via="elobjetivista" data-lang="es" data-hashtags="noticias">Twittear</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                <a href="https://twitter.com/elobjetivista" class="twitter-follow-button" data-show-count="false" data-lang="es">Seguir a @elobjetivista</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+            <div class="fb-like" data-href="https://elobjetivista.com/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+            <div id="fb-root"></div>
+            <script>(function(d, s, id) {
+              var js, fjs = d.getElementsByTagName(s)[0];
+              if (d.getElementById(id)) return;
+              js = d.createElement(s); js.id = id;
+              js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&appId=416657381794955&version=v2.0";
+              fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script>
           
-          <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
-          <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5268d2a97e02b5bb"></script>   
-        <p>     
+          
+          
+          
     </div>
   </div>
   <br>
 
        
-    <div class="large-12 columns">             
+    <div class="container">             
          {% block content %}{% endblock %}            
     </div>
                
     <!-- FOOTER -->      
-   
-    <div class="large-12 columns" id="ban">
-    <br> 
-      <div class="row">
-      <p>&copy; 2014 El Objetivista</p>  
-      </div>     
+   <div class="footer">
+      <div class="large-12 columns">
+       <br> 
+        <div class="row">
+        <p>&copy; 2014 El Objetivista</p>  
+        </div>     
+      </div>
     </div>
+
      
   
    
@@ -259,6 +133,7 @@
     <script src="static/js/vendor/jquery.js"></script>
     <script src="static/js/foundation.min.js"></script>
     <script src="static/js/foundation/foundation.orbit.js"></script>
+    <script src="/static/js/app.js"></script>
     <script>
       $(document).foundation();   
       var $container = $('#container').packery({
