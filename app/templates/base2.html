@@ -15,11 +15,7 @@
     <!-- Custom styles -->
     <link rel="stylesheet" href="/static/css/foundation.css" />
     <link href="/static/css/flat-ui.css" rel="stylesheet">
-    <link rel="stylesheet" href="/static/css/style.css" />
-    <script src="/static/js/vendor/modernizr.js"></script>
-    <script src="http://packery.metafizzy.co/packery.pkgd.min.js"></script>
-     
-    
+    <link rel="stylesheet" href="/static/css/style.css" />    
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -49,52 +45,43 @@
         </ul>       
       </section>
     </div>
-    </nav>
+    </nav>  
   
-  </div>
-  <div id="ban">
-    <div class="row text-center">
-          <div class="small-2 large-2 columns"> 
-          <a id="yo-button"></a>  
-          </div> 
-           <div class="small-8 large-8 columns"> 
+    <div id="ban">
+      <div class="row">
+            <div class="small-2 large-2 columns">
+               <a id="yo-button"></a> 
+            </div>
+            <div class="small-8 large-8 columns"> 
+             
+              <span>
               <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://elobjetivista.com" data-via="elobjetivista" data-lang="es" data-hashtags="noticias">Twittear</a>
-                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-                <a href="https://twitter.com/elobjetivista" class="twitter-follow-button" data-show-count="false" data-lang="es">Seguir a @elobjetivista</a>
-            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-            <div class="fb-like" data-href="https://elobjetivista.com/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
-            <div id="fb-root"></div>
-            <script>(function(d, s, id) {
-              var js, fjs = d.getElementsByTagName(s)[0];
-              if (d.getElementById(id)) return;
-              js = d.createElement(s); js.id = id;
-              js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&appId=416657381794955&version=v2.0";
-              fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));</script>
-          
-          
-          
-          
-    </div>
-  </div>
-  <br>
 
-       
-    <div class="container">             
-         {% block content %}{% endblock %}            
-    </div>
-               
-    <!-- FOOTER -->      
-   <div class="footer">
-      <div class="large-12 columns">
-       <br> 
-        <div class="row">
-        <p>&copy; 2014 El Objetivista</p>  
-        </div>     
+              <a href="https://twitter.com/elobjetivista" class="twitter-follow-button" data-show-count="false" data-lang="es">Seguir a @elobjetivista</a>
+              <span>
+              <a class="fb-like" data-href="https://elobjetivista.com/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></a>
+              <a id="fb-root"></a>         
+            
+            </div>
       </div>
     </div>
-
-     
+  <br>  
+  <br>
+  <br>
+  <br>    
+  <div class="container">             
+         {% block content %}{% endblock %}            
+  </div>               
+    <!-- FOOTER -->      
+  
+  <div class="container">      
+    <div class="small-12 large-12 columns footer"> 
+    <br>    
+      <div class="row"> 
+      <p style="color:white">&copy; 2014 El Objetivista</p>  
+    </div> 
+    </div>        
+  </div>   
   
    
     <!-- AddThis Smart Layers BEGIN -->
@@ -125,7 +112,20 @@
       (document.head || document.getElementsByTagName("head")[0]).appendChild(s);
     </script>       
       
-    </div><!-- /.container -->
+     <script>(function(d, s, id) {
+              var js, fjs = d.getElementsByTagName(s)[0];
+              if (d.getElementById(id)) return;
+              js = d.createElement(s); js.id = id;
+              js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&appId=416657381794955&version=v2.0";
+              fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+     </script>
+
+     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    <!-- /.container -->
 
     <!-- Foundation core JavaScript
     ================================================== -->
@@ -133,16 +133,7 @@
     <script src="static/js/vendor/jquery.js"></script>
     <script src="static/js/foundation.min.js"></script>
     <script src="static/js/foundation/foundation.orbit.js"></script>
-    <script src="/static/js/app.js"></script>
-    <script>
-      $(document).foundation();   
-      var $container = $('#container').packery({
-  itemSelector: '.item',
-  columnWidth: $container.find('.grid-sizer')[0]
-});
-      // init
-      
-      
-    </script>
+    <script src="/static/js/vendor/modernizr.js"></script>
+    <script src="/static/js/app.js"></script>    
   </body>
 </html>

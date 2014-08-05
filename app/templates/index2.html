@@ -5,7 +5,7 @@
   {% for item in news %}
     {% if item.image %}  
     <a href="/noticias" >   
-      <div class="container container-radius">         
+      <div class="title container-radius">         
           <img src={{item.image}} style="width:100%; height:100%;"/> 
           <div class="image {{item.div}}">           
             <div class="row">
@@ -31,7 +31,7 @@
 <div class="large-4 columns">
   {% for item in news2 %}
     {% if item.image %}     
-      <div class="container container-radius">
+      <div class="title container-radius">
 
           <img src={{item.image}} style="width:100%; height:100%;"/> 
           <div class="image {{item.div}}"> 
@@ -56,10 +56,12 @@
   {% endfor %}
 </div>
 <div class="large-3 columns">
+  
   <div class="panel radius" style="background-color:white;">
   <h5>Tendencias</h5>
   <p>It has an easy to override visual style, and is appropriately subdued.</p>
   </div>
+  
 
 </div>
 {% endblock %}
