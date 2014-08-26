@@ -42,37 +42,3 @@ def news():
     
     return render_template("noticias.html",
                             title="noticias")
-
-
-@app.route('/analytics/')
-def analytics(): 
-    input = getNews.getData()
-    jsonData = json.loads(input) 
-    news  = jsonData['value']['items'] 
-    now = time.strftime("%c")
-    words=[]
-    for art in news:
-        if getNews.whatisthis(art['title']) == "unicode string":
-            words_title=art['title'].encode('utf-8','ignore').replace("@%#()&?.!/;':\"<,",'').split()
-        else: 
-            words_title=str(art['title']).split()       
-        words.extend(words_title)
-    
-    #This is the simple way to remove stop words
-    important_words=[]
-    for word in words:
-        if word.lower() not in stopwords.words('spanish'):
-            important_words.append(word)
-        
-    wordFreqD = {}   
-    sum = 0
-    for i in range(len(important_words)):
-        for char in '\"':  
-            important_words[i] = important_words[i].replace(char,'')
-        wordFreqD[important_words[i]] = wordFreqD.get(important_words[i], 0)+1
-
-    output = [{"children":{"packageName":"entities","className":k,"value":v}} for v,k in sorted([(v,k) for k,v in wordFreqD.items()],reverse=True)]
-    output2=output[:30]
-    return render_template("analytics.html",                            
-                            entities = json.dumps(output2),
-                            now= now)
