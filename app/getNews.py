@@ -9,5 +9,11 @@ def fetchNews():
     return data
 
 
+def fetchApi(url):
+    response = urllib.urlopen(url)
+    data = response.read()
+    return data
+
+
 
 

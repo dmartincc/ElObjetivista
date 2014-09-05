@@ -23,22 +23,25 @@ def index():
 
 @app.route('/test')
 def index2(): 
-    input = getNews.fetchNews()  
+    #input = getNews.fetchApi('http://127.0.0.1:5000/api/0.1/articles')  
+    #jsonData = json.loads(input) 
+    #news  = jsonData['result']
+
+    input = getNews.fetchNews()
     jsonData = json.loads(input) 
     news  = jsonData['value']['items'] 
     now = time.strftime("%c")
     range=len(news)-30
-    data=random.sample(news, 100)
+    data=random.sample(news, range)
+    
     a = ['a','b','c','d']
-    for item in data:
+    for item in news:
         item["div"]=a[random.randint(0,3)]
     return render_template("index2.html",
                             #title = 'Home',
-                            news = data[0:19],
-                            news2 = data[20:39])
+                            news = data)
 
 @app.route('/noticias')
-def news(): 
-    
+def news():     
     return render_template("noticias.html",
                             title="noticias")
