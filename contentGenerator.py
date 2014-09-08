@@ -66,16 +66,16 @@ def newsGenerator():
 		#title=headlineGenerator(corpus,item['entity'])
 
 		output = {'title':title,
+				  'author':"elobjetivista",
 			      'summary':content,
+			      'image':[],
 				  'sentiment':{'polarity':sent[0],'subjectivity':sent[1]},
 				  'time':int(60*float(len(content.split()))/250),
 				  'class':""}
 
 		db.newarticles.insert(output)
 
-		#print output
-
-	
+			
 
 
 
