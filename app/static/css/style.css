@@ -281,7 +281,7 @@ img{
 }
 
 .header{           
-  background: url(/static/img/eo_landingBackground.png) no-repeat center center fixed;
+  background: url(/static/img/eo_landingBackground.PNG) no-repeat center center fixed;
   background-color:#f1f4f9;
   -webkit-background-size: cover;
   -moz-background-size: cover;
