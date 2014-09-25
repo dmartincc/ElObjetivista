@@ -8,17 +8,19 @@
   "itemSelector": ".item", "isFitWidth": true, "transitionDuration": 0}'>
   <div class="grid-sizer"></div>
   {% for item in news[0:40] %} 
-  {% if item.image %} 
+  
   <div class="item">       
-      <div class="title container-radius">         
+      <div class="title container-radius"> 
+       {% if item.image %}        
           <img src={{item.image}} /> 
+           {%endif%} 
           <div class="image {{item.div}}">  
            <div class="ban {{item.div}}"> </div>
            <br>                    
             <div class="row">
               <div class="large-12 columns">
                 <a href="/articles/id/{{item['_id']}}">   
-              <h6 style="color:white">{{item.title}}</h6>
+              <h6 style="color:#2c3f52"><strong>{{item.title}}</strong></h6>
               </a> 
               </div> 
               </div>  
@@ -33,7 +35,7 @@
             </div>                     
       </div>                    
   </div>
-   {%endif%} 
+  
   {% endfor %}
   </div>
 </div>
@@ -65,8 +67,9 @@
 <br>
 {% endblock %}
 {% block scripts %}
+<script src="/static/js/AnimOnScroll.js"></script>
 <script>
-      new animOnScroll(document.getElementById( 'grid' ), {
+     new animOnScroll(document.getElementById( 'grid' ), {
         minDuration : 0.4,
         maxDuration : 0.6,
         viewportFactor : 0.2

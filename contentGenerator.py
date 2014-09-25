@@ -65,8 +65,8 @@ def newsGenerator():
 		sent=sentiment(content)
 		#title=headlineGenerator(corpus,item['entity'])
 
-		output = {'title':title,
-				  'author':"elobjetivista",
+		output = {"title":title,
+				  "author":"elobjetivista",
 			      'summary':content,
 			      'image':[],
 				  'sentiment':{'polarity':sent[0],'subjectivity':sent[1]},

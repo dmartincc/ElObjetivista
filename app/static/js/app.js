@@ -6,7 +6,7 @@ var main = function() {
     });
   },function(event) {
     $('.image',this).removeClass('active-slide').animate({
-      height: "70px"
+      height: "67px"
     });
   });
 
@@ -14,7 +14,7 @@ var main = function() {
 }
 
 
-$(document).ready(main);
+//$(document).ready(main);
 
 
 // or with jQuery
@@ -38,4 +38,17 @@ msnry.off( 'layoutComplete', onLayout );
 msnry.on( 'layoutComplete', function() {
   console.log('layout done, just this one time');
   return true;
+});
+
+
+$(document).ready(function () {  
+  var top = $('.sticky').offset().top;
+  $(window).scroll(function (event) {
+    var y = $(this).scrollTop();
+    if (y >= top)
+      $('.sticky').addClass('fixed');
+    else
+      $('.sticky').removeClass('fixed');
+    $('.sticky').width($('.sticky').parent().width());
+  });
 });

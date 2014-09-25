@@ -1,7 +1,14 @@
-from flask import render_template, jsonify
+# -*- coding: utf-8 -*
+from flask import render_template, jsonify, request
 from app import app
 import getNews , json, time, random, re
 
+
+@app.route("/")
+def landing():
+    title='El periódico de las tendencias sociales y basado en datos'
+    return render_template("landing.html",
+                            title = title)
 
 @app.route('/works')
 def works(): 
@@ -28,7 +35,8 @@ def works():
                             trends = trends,
                             news = data)
 
-@app.route('/')
+
+@app.route('/portada')
 def index(): 
     input = getNews.fetchApi('http://elobjetivista-api.herokuapp.com/articles')  
     jsonData = json.loads(input) 
@@ -85,6 +93,9 @@ def news(idnum):
                             title="noticias",
                             data=news)
 
-@app.route('/masonery')
-def test():
-    return render_template("masonery.html")
+
+@app.route('/sitemap.xml')
+def sitemap():
+    url_root = request.url_root[:-1]
+    rules = app.url_map.iter_rules()
+    return render_template('sitemap.xml', url_root=url_root, rules=rules)
